@@ -134,23 +134,24 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="" class="img-fluid">
+            <img src="images/birthdayparadox.png" alt="Birthday Paradox Project" class="img-fluid">
+          </div>
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>Birthday Paradox Simulator</h3>
               <p>
-               Motivation of the project
+                The Birthday Paradox demonstrates a counterintuitive probability: in a room of just 23 people, there's a 50% chance that at least two share a birthday. This mathematical phenomenon contradicts many people's initial thoughts that the probability should be much lower, given 365 possible birthdays in a year.
               </p>
               <p>
-              Functional requirements/what the project does
+                For this project, I implemented a comprehensive object-oriented simulation framework in Java. This design consists of several key components: a Birthday class that encapsulates month and day with proper equals() and hashCode() implementations for collision detection; a Month enum representing calendar months with varying days; a Trial class that generates and evaluates random birthday sets; and an Experiment class that runs multiple trials to calculate probability statistics.
               </p>
               <p>
-              Project design
+                The implementation uses several advanced Java features and design patterns. I employed polymorphism and dependency injection to ensure components were readily testable. The Random class is passed throughout the system rather than instantiated locally, allowing testing with fixed seeds. I also used JUnit for verification and Mockito for isolating components during testing, implementing edge case handling for empty groups, single individuals, and maximum population sizes (367 people, which guarantees collisions).
               </p>
               <p>
-              Implementation
+                Through this project, I strengthened my understanding of object-oriented design principles and probability theory. I gained practical experience with Java's collection framework and I learned techniques for simulating probabilistic events and calculating reliable results over multiple trials. The project also improved my ability to write robust unit tests that cover edge cases, use mocking frameworks to isolate system components.
               </p>
 
 
