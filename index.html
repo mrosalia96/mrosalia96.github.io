@@ -131,12 +131,12 @@
             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Projects</h2>
           </div>
         </div>
-        <div class="row">
+
+
+
+        <div class="row" style="margin-top: 50px;">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
-          
             <img src="images/birthdayparadox.png" alt="Birthday Paradox Project" class="img-fluid">
-          </div>
-          
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
@@ -145,24 +145,99 @@
                 The Birthday Paradox demonstrates a counterintuitive probability: in a room of just 23 people, there's a 50% chance that at least two share a birthday. This mathematical phenomenon contradicts many people's initial thoughts that the probability should be much lower, given 365 possible birthdays in a year.
               </p>
               <p>
-                For this project, I implemented a comprehensive object-oriented simulation framework in Java. This design consists of several key components: a Birthday class that encapsulates month and day with proper equals() and hashCode() implementations for collision detection; a Month enum representing calendar months with varying days; a Trial class that generates and evaluates random birthday sets; and an Experiment class that runs multiple trials to calculate probability statistics.
+                For this project, I implemented a comprehensive object-oriented simulation framework in Java. This design consists of several key components: a <code>Birthday</code> class that encapsulates month and day with proper <code>equals()</code> and <code>hashCode()</code> implementations for collision detection; a <code>Month</code> enum representing calendar months with varying days; a <code>Trial</code> class that generates and evaluates random birthday sets; and an <code>Experiment</code> class that runs multiple trials to calculate probability statistics.
               </p>
               <p>
-                The implementation uses several advanced Java features and design patterns. I employed polymorphism and dependency injection to ensure components were readily testable. The Random class is passed throughout the system rather than instantiated locally, allowing testing with fixed seeds. I also used JUnit for verification and Mockito for isolating components during testing, implementing edge case handling for empty groups, single individuals, and maximum population sizes (367 people, which guarantees collisions).
+                The implementation uses several advanced Java features and design patterns. I employed polymorphism and dependency injection to ensure components were readily testable. The <code>Random</code> class is passed throughout the system rather than instantiated locally, allowing testing with fixed seeds. I also used JUnit for verification and Mockito for isolating components during testing, implementing edge case handling for empty groups, single individuals, and maximum population sizes (367 people, which guarantees collisions).
               </p>
               <p>
                 Through this project, I strengthened my understanding of object-oriented design principles and probability theory. I gained practical experience with Java's collection framework and I learned techniques for simulating probabilistic events and calculating reliable results over multiple trials. The project also improved my ability to write robust unit tests that cover edge cases, use mocking frameworks to isolate system components.
               </p>
-
-
             </div>
-
-            
-
           </div>
         </div>
-      </div>
-      
+
+
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/elevator.png" alt="Elevator Simulator" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Elevator Simulator Project</h3>
+              <p>
+                For this project, my teammate Chris Najera and I designed and implemented a comprehensive elevator simulator that models how different types of elevators service a multi-story building. The system manages multiple elevator types (Standard, Freight, Penthouse, and Express), each with unique movement rules and constraints. This project demonstates their operations and ability to efficiently handle passenger requests.
+              </p>
+              <p>
+                The functional requirements of our simulator included handling elevator calls with specified start and end floors, coordinating multiple elevators with different service capabilities, implementing scheduling algorithms to assign calls to appropriate elevators, and visualizing the state of the entire system throughout the simulation. Each elevator moves one floor per time unit, must stop to pick up and drop off passengers, and returns to the ground floor when idle.
+              </p>
+              <p>
+                Our design approach focused on applying object-oriented principles and SOLID design patterns. We created an interface-based approach where an <code>IElevator</code> interface defined common behaviors, while an <code>AbstractElevator</code> class provided shared implementation. We then implemented four concrete elevator classes with specialized behaviors. This approach demonstrates the Open-Closed Principle by allowing new elevator types to be added without modifying existing code, and the Single Responsibility Principle by giving each class a clear, focused purpose.
+              </p>
+              <p>
+                I was personally responsible for designing and implementing the core elevator architecture, starting with the <code>IElevator</code> interface that defined the common behaviors all elevator types would share. I then developed the <code>AbstractElevator</code> class that provided reusable implementation for common functionality while leaving specialized behavior to be implemented by concrete classes. The most challenging aspect was implementing the four concrete elevator types (Standard, Freight, Penthouse, and Express), each with unique movement rules and call acceptance logic. I had to carefully design the <code>canServiceCall()</code> method for each type to correctly apply their specific constraints while maintaining a consistent interface.
+              </p>
+              <p>
+                Throughout this project, I followed a test-driven development process, writing unit tests before implementing each elevator component. This approach helped me identify edge cases early, such as how elevators should manage direction changes and handle floor restrictions. This project significantly improved my understanding of object-oriented principles like polymorphism, and encapsulation.
+              </p>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/WimHof.png" alt="Meditation and Breathing App" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Meditation and Breathing App</h3>
+              <p>
+                This project focused on developing a specialized Python application that facilitates Wim Hof breathing exercises, a technique known for its potential wellness benefits. Using the <code>Tkinter</code> library, I created a simple interface that guides users through structured breathing cycles while providing visual and text-based cues for each phase of the exercise.
+              </p>
+              <p>
+                The functional requirements included implementing precise timing mechanisms for breathing phases (inhale, exhale, and breath retention), creating a round-based system to manage multiple cycles of the Wim Hof method, developing contextual motivational messaging that appears at strategic points during the exercise (halfway, near completion, and final breath), and designing a clean, distraction-free user interface with a calming color scheme.
+              </p>
+              <p>
+                My design approach centered on creating an application that prioritizes simplicity and user focus during meditation. I implemented a minimalist interface with a soothing light blue background and contrasting text that's easy to read. The architecture separates the UI components from the timing logic through the use of threading, preventing interface freezing during the timed breathing sessions.
+              </p>
+              <p>
+                The implementation uses <code>Tkinter</code> for all GUI elements and employs Python's <code>threading</code> module to handle timing operations without blocking the main interface thread. I used a state machine approach for managing the different breathing phases, with each breath cycle consisting of 30 alternating inhale/exhale cycles followed by a 60-second breath retention period. The app tracks progress and provides encouraging messages at key points (breath 15: "Halfway there", breath 24: "Almost there", breath 29: "Last one") to maintain user engagement.
+              </p>
+              <p>
+                Through this project, I gained valuable experience in designing wellness applications with precise timing requirements, multithreaded programming to maintain responsive interfaces, and creating intuitive user experiences for guided practices. The implementation of threaded timing operations was particularly educational, as it required careful coordination between the UI updates and the meditation timing logic.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/bank.png" alt="Financial Institution Processor" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Financial Institution Processor</h3>
+              <p>
+                Engineered a financial data processing system in Python, implementing an ETL pipeline that automates consolidation of transaction data, featuring custom validation rules, dynamic CSV parsing, and standardized output generation, resulting in improved data accuracy and processing efficiency.
+              </p>
+              <p>
+                The functional requirements included developing a system that could process transaction data from multiple financial institutions with varying formats (Apple Card, American Express, Navy Federal, Bank of America, Chase, and Wells Fargo). The system needed to normalize date formats, standardize amount representations, extract transaction descriptions, handle different header structures, and create a unified output format while preserving data integrity across sources.
+              </p>
+              <p>
+                My design approach utilized a rule-based architecture using dictionary configurations to define the unique characteristics of each financial institution's data format. I implemented a configurable header detection system capable of identifying file sources based on their structure, alongside flexible data extraction logic that adapts to each institution's specific formatting. This approach made the system extensible, allowing new financial institutions to be added by simply defining their rule sets.
+              </p>
+              <p>
+                The implementation handles challenges including multiple date formats, varying header positions, different amount representations, and institution-specific nuances. Key technical features include intelligent file type detection, Unicode handling with fallback encoding options, chronological transaction ordering, and automatic archiving with timestamped backups.
+              </p>
+              <p>
+                This project significantly improved my company's financial data processing capabilities, reducing manual data consolidation time by approximately 70%. Through this work, I strengthened my skills in Python data processing, file manipulation, and designing complex rule-based systems. The experience of building a solution that handles real-world inconsistencies in financial data formats taught me valuable lessons about creating robust, maintainable software for business applications.
+              </p>
+            </div>
+          </div>
+        </div>
 
     </section>
 
