@@ -145,7 +145,7 @@
                 The Birthday Paradox demonstrates a counterintuitive probability: in a room of just 23 people, there's a 50% chance that at least two share a birthday. This mathematical phenomenon contradicts many people's initial thoughts that the probability should be much lower, given 365 possible birthdays in a year.
               </p>
               <p>
-                For this project, My partner Diego Hook and I implemented a comprehensive object-oriented simulation framework in Java. This design consists of several key components: a <code>Birthday</code> class that encapsulates month and day with proper <code>equals()</code> and <code>hashCode()</code> implementations for collision detection; a <code>Month</code> enum representing calendar months with varying days; a <code>Trial</code> class that generates and evaluates random birthday sets; and an <code>Experiment</code> class that runs multiple trials to calculate probability statistics.
+                For this project, my teammate Diego Hook and I implemented a comprehensive object-oriented simulation framework in Java. This design consists of several key components: a <code>Birthday</code> class that encapsulates month and day with proper <code>equals()</code> and <code>hashCode()</code> implementations for collision detection; a <code>Month</code> enum representing calendar months with varying days; a <code>Trial</code> class that generates and evaluates random birthday sets; and an <code>Experiment</code> class that runs multiple trials to calculate probability statistics.
               </p>
               <p>
                 The implementation uses several advanced Java features and design patterns. I employed polymorphism and dependency injection to ensure components were readily testable. The <code>Random</code> class is passed throughout the system rather than instantiated locally, allowing testing with fixed seeds. I also used JUnit for verification and Mockito for isolating components during testing, implementing edge case handling for empty groups, single individuals, and maximum population sizes (367 people, which guarantees collisions).
@@ -238,6 +238,37 @@
             </div>
           </div>
         </div>
+
+        
+        <div class="row" style="margin-top: 50px;">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <img src="images/flashcard.png" alt="Flashcard System" class="img-fluid">
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Flashcard System</h3>
+              <p>
+                The Flashcard System is a comprehensive learning application designed to help users create, organize, and study flashcards effectively. This project addresses the inefficiencies of traditional study methods by providing a digital solution with multiple card types, flexible study strategies, and progress tracking capabilities.
+              </p>
+              <p>
+                Developed collaboratively with Diego Hook, this system supports various card types including basic question-answer cards and true/false cards. The application features different study strategies like sequential and random card presentation, allowing users to customize their learning experience. The system also tracks study statistics and provides progress insights to help users optimize their learning sessions.
+              </p>
+              <p>
+                Our design heavily emphasizes object-oriented programming principles and design patterns. We implemented the Factory Pattern through <code>CardFactory</code> for centralized card creation, the Strategy Pattern for interchangeable study algorithms, and the Singleton Pattern for consistent file management. The architecture includes an <code>ICard</code> interface with concrete implementations (<code>BasicCard</code>, <code>TrueFalseCard</code>) extending an <code>AbstractCard</code> class, demonstrating inheritance and polymorphism effectively.
+              </p>
+              <p>
+               I was mainly responsible for the card design, including the <code>ICard</code> interface, <code>AbstractCard</code> base class, and the concrete implementations of <code>BasicCard</code> and <code>TrueFalseCard</code>. I also developed the <code>Deck</code> class for managing collections of flashcards and implemented the main <code>FlashcardApp</code> class that coordinates all system components. We followed test-driven development throughout the project, achieving 80-85% code coverage across all components.
+              </p>
+              </p>
+              <p>
+                This project enhanced my understanding of software design patterns, collaborative development using Git with proper branching and pull request workflows, and the importance of clean code principles. The experience of building a complete learning application from design to implementation provided valuable insights into creating real-world software solutions while maintaining high quality standards.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
 
     </section>
 
